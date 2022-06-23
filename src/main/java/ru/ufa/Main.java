@@ -85,6 +85,11 @@ public class Main {
 
         fileCreate("nasaResponse.txt");
         fileWrite("nasaResponse.txt", body2);
+
+        String mediaFileName = urlNasa.substring((urlNasa.lastIndexOf("/")) + 1);
+        fileCreate(mediaFileName);
+        fileWrite(mediaFileName, body2);
+        System.out.println("Файл медиа " + mediaFileName + " сохранен!");
     }
 
     public static void fileCreate(String fileName) {
